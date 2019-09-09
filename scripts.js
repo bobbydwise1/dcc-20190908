@@ -10,6 +10,7 @@ For example, given the array [13, 18, 25, 2, 8, 10] and the element 8, return 4 
 You can assume all the integers in the array are unique.
 */
 
+// This is the javascript "default" solution
 const finder = (yourArray, term) => {
   let found = yourArray.findIndex(
     function(element) {
@@ -29,11 +30,12 @@ $(document).ready(function() {
   $('#form1').submit(function(){
     event.preventDefault()
     input1 = $('#input-1').val()
+    input1 = input1.replace(/\'/g,'"')
+    input1 = JSON.parse(input1)
     console.log(input1)
     input2 = $('#input-2').val()
-    console.log(input1)
     console.log(input2)
-    $('#output-1').text(JSON.stringify(multiline(input1,input2)))
+    $('#output-1').text(JSON.stringify(finder(input1,input2)))
   })
 
 });
