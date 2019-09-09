@@ -13,7 +13,7 @@ You can assume all the integers in the array are unique.
 const finder = (yourArray, term) => {
   let found = yourArray.findIndex(
     function(element) {
-      return element == 8
+      return element == term
     })
   return found;
 }
