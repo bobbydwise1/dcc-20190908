@@ -10,13 +10,19 @@ For example, given the array [13, 18, 25, 2, 8, 10] and the element 8, return 4 
 You can assume all the integers in the array are unique.
 */
 
-
+const finder = (yourArray, term) => {
+  let found = yourArray.findIndex(
+    function(element) {
+      return element == 8
+    })
+  return found;
+}
 
 const test0 = [13, 18, 25, 2, 8, 10]
 const test1 = 8
 const result0 = 4
 
-console.log(findEle(test0,test1))
+console.log(finder(test0,test1))
 
 $(document).ready(function() {
 
